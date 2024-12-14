@@ -1,5 +1,7 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { SiGithub, SiLinkedin } from "@icons-pack/react-simple-icons";
+import { MailPlus } from "lucide-react";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -8,47 +10,54 @@ export const Route = createLazyFileRoute("/")({
 function Index() {
   return (
     <>
-      {/* Hero */}
-      <div className="relative overflow-hidden py-24 lg:py-32">
+      <div className="relative overflow-hidden py-24 lg:py-32 mx-auto">
         {/* Gradients */}
         <div
           aria-hidden="true"
           className="flex absolute -top-96 start-1/2 transform -translate-x-1/2"
         >
-          <div className="bg-gradient-to-r from-background/50 to-background blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem]" />
-          <div className="bg-gradient-to-tl blur-3xl w-[90rem] h-[50rem] rounded-full origin-top-left -rotate-12 -translate-x-[15rem] from-primary-foreground via-primary-foreground to-background" />
+          <div className="bg-gradient-to-r from-blue-200 to-blue-300 blur-3xl w-[35rem] h-[44rem] rotate-[-30deg] transform translate-x-[5rem]" />
+          <div className="bg-gradient-to-tr blur-3xl w-[100rem] h-[55rem] rounded-full origin-top-left -rotate-12 -translate-x-[5rem] from-blue-200 via-blue-300 to-blue-400" />
         </div>
-        {/* End Gradients */}
+
         <div className="relative z-10">
-          <div className="container py-10 lg:py-16">
+          <div className="container py-10 lg:py-16 mx-auto">
             <div className="max-w-2xl text-center mx-auto">
-              <p className="">Elevate your projects</p>
-              {/* Title */}
+              <p className="text-lg text-slate-700">
+                Full Stack Software Engineer
+              </p>
               <div className="mt-5 max-w-2xl">
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-                  Beautiful UI Blocks
+                  Johnny Wong
                 </h1>
               </div>
-              {/* End Title */}
               <div className="mt-5 max-w-3xl">
-                <p className="text-xl text-muted-foreground">
-                  Over 10+ fully responsive, UI blocks you can drop into your
-                  Shadcn UI projects and customize to your heart&apos;s content.
+                <p className="text-lg text-slate-600">
+                  I build intuitive and user friendly end-to-end experiences.
                 </p>
               </div>
-              {/* Buttons */}
+              {/* Button Group */}
               <div className="mt-8 gap-3 flex justify-center">
-                <Button size={"lg"}>Get started</Button>
-                <Button size={"lg"} variant={"outline"}>
-                  Learn more
+                <Button asChild size={"lg"}>
+                  <Link href="/about">Learn more</Link>
                 </Button>
               </div>
-              {/* End Buttons */}
+              {/* Social Media */}
+              <div className="mt-8 gap-6 flex justify-center">
+                <a href="https://github.com/johnnywong30">
+                  <SiGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/johnnywong30">
+                  <SiLinkedin />
+                </a>
+                <a href="mailto:johnnywong2430@gmail.com">
+                  <MailPlus />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {/* End Hero */}
     </>
   );
 }
