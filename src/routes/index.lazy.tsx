@@ -32,8 +32,9 @@ function Index() {
                 </h1>
               </div>
               <div className="mt-5 max-w-3xl">
-                <p className="text-lg text-slate-600">
-                  I build intuitive and user friendly end-to-end experiences.
+                <p className="text-lg text-slate-600 text-pretty">
+                  I build intuitive and user friendly end-to-end experiences,
+                  with a focus on backend development.
                 </p>
               </div>
               {/* Button Group */}
