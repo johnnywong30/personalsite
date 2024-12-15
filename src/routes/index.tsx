@@ -47,6 +47,7 @@ function Index() {
                 <Button asChild size={"lg"}>
                   <Link href="/about">Learn more</Link>
                 </Button>
+                <Button size={"lg"}>Get in touch</Button>
               </div>
               {/* Social Media */}
               <div className="mt-8 gap-6 flex justify-center">
@@ -58,9 +59,6 @@ function Index() {
                   target="_blank"
                 >
                   <SiLinkedin />
-                </a>
-                <a href="mailto:johnnywong2430@gmail.com">
-                  <MailPlus />
                 </a>
               </div>
             </div>

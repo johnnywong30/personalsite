@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { GlowCursor } from "@/components/ui/glow-cursor";
 import React from "react";
 
 type NavigationRoute = {
@@ -27,18 +28,14 @@ const navigationRoutes: NavigationRoute[] = [
     to: "/about",
     name: "About",
   },
-  {
-    to: "/",
-    name: "Projects",
-  },
-  {
-    to: "/",
-    name: "Hobbies",
-  },
-  {
-    to: "/",
-    name: "Contact Me",
-  },
+  // {
+  //   to: "/",
+  //   name: "Projects",
+  // },
+  // {
+  //   to: "/",
+  //   name: "Hobbies",
+  // },
 ];
 
 function MobileNavigationMenu() {
@@ -89,18 +86,6 @@ function Navigation() {
   );
 }
 
-export const Route = createRootRoute({
-  component: () => (
-    <div className="bg-blue-100 min-h-svh">
-      <Navigation />
-      <div className="w-full h-full">
-        <Outlet />
-      </div>
-      <TanStackRouterDevtools />
-    </div>
-  ),
-});
-
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
@@ -126,3 +111,15 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+
+export const Route = createRootRoute({
+  component: () => (
+    <div className="bg-blue-100 min-h-svh">
+      <Navigation />
+      <div className="w-full h-full">
+        <Outlet />
+      </div>
+      <TanStackRouterDevtools />
+    </div>
+  ),
+});
