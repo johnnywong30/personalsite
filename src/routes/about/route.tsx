@@ -3,10 +3,9 @@ import { ArrowDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "motion/react";
 import { useLottie } from "lottie-react";
-// import CatLoading from "@/components/lottie/catloading.json";
 import CatPlayingData from "@/components/lottie/catplaying.json";
 
-export const Route = createFileRoute("/about/")({
+export const Route = createFileRoute("/about")({
   component: About,
 });
 
@@ -14,11 +13,6 @@ function About() {
   const options = {
     animationData: CatPlayingData,
     loop: true,
-    // style: {
-    //   // width: "50px",
-    //   // height: "50px",
-    //   // marginTop: "15px",
-    // },
   };
 
   const { View: CatPlaying } = useLottie(options);
@@ -100,7 +94,6 @@ function About() {
             alt="placeholder johnny picture"
             className="max-h-96 w-full rounded-md object-cover"
           />
-          {/* {View} */}
         </div>
       </div>
     </section>
