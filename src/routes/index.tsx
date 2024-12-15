@@ -1,9 +1,10 @@
-import { createLazyFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SiGithub, SiLinkedin } from "@icons-pack/react-simple-icons";
 import { MailPlus } from "lucide-react";
+import { motion } from "motion/react";
 
-export const Route = createLazyFileRoute("/")({
+export const Route = createFileRoute("/")({
   component: Index,
 });
 
@@ -20,7 +21,11 @@ function Index() {
           <div className="bg-gradient-to-tr blur-3xl w-[100rem] h-[55rem] rounded-full origin-top-left -rotate-12 -translate-x-[5rem] from-blue-200 via-blue-300 to-blue-400" />
         </div>
 
-        <div className="relative z-10">
+        <motion.div
+          className="relative z-10"
+          initial={{ y: -100, scale: 0.5 }}
+          animate={{ y: 0, transition: { duration: 2 }, scale: 1 }}
+        >
           <div className="container py-10 lg:py-16 mx-auto">
             <div className="max-w-2xl text-center mx-auto">
               <p className="text-lg text-slate-700">
@@ -57,7 +62,7 @@ function Index() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
