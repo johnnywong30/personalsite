@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SiGithub, SiLinkedin } from "@icons-pack/react-simple-icons";
-import { MailPlus } from "lucide-react";
 import { motion } from "motion/react";
 
 export const Route = createFileRoute("/")({

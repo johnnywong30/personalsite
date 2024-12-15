@@ -1,32 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
+import { useLottie } from "lottie-react";
+// import CatLoading from "@/components/lottie/catloading.json";
+import CatPlayingData from "@/components/lottie/catplaying.json";
 
 export const Route = createFileRoute("/about/")({
   component: About,
 });
 
 function About() {
+  const options = {
+    animationData: CatPlayingData,
+    loop: true,
+    // style: {
+    //   // width: "50px",
+    //   // height: "50px",
+    //   // marginTop: "15px",
+    // },
+  };
+
+  const { View: CatPlaying } = useLottie(options);
+
   return (
     <section className="py-32 mx-auto">
       <div className="container">
         <div className="grid items-center gap-8 lg:grid-cols-2 mx-8">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left px-1 lg:px-2">
             <Badge variant="outline">
               About Me
               <ArrowDown className="ml-2 size-4" />
             </Badge>
+
             <motion.h1
-              className="my-6 text-pretty text-4xl font-bold lg:text-6xl"
+              className="my-2 lg:my-4 text-pretty text-4xl font-bold lg:text-6xl flex flex-row"
               initial={{ x: -400, scale: 0.5 }}
               animate={{ x: 0, transition: { duration: 1 }, scale: 1 }}
             >
               Johnny Wong
+              <div className="w-16 h-16 pt-2 lg:pt-6">{CatPlaying}</div>
             </motion.h1>
+
             <motion.div
-              className="my-4 max-w-xl text-muted-foreground flex flex-col gap-y-3"
+              className="my-1 max-w-xl text-muted-foreground flex flex-col gap-y-3"
               initial={{ x: -600, scale: 0.5 }}
               animate={{ x: 0, transition: { duration: 2 }, scale: 1 }}
             >
@@ -83,6 +100,7 @@ function About() {
             alt="placeholder johnny picture"
             className="max-h-96 w-full rounded-md object-cover"
           />
+          {/* {View} */}
         </div>
       </div>
     </section>
