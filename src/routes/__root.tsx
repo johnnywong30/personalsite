@@ -76,7 +76,7 @@ function Navigation() {
             {navigationRoutes.map((n, i) => (
               <Link
                 to={n.to}
-                className="font-medium flex items-center text-sm transition-colors hover:text-gray-100"
+                className="font-medium flex items-center text-sm transition-colors hover:text-blue-100"
                 key={`nav-link-${i}`}
               >
                 {n.name}

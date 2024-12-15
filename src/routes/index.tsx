@@ -24,7 +24,7 @@ function Index() {
         <motion.div
           className="relative z-10"
           initial={{ y: -100, scale: 0.5 }}
-          animate={{ y: 0, transition: { duration: 2 }, scale: 1 }}
+          animate={{ y: 0, transition: { duration: 1.5 }, scale: 1 }}
         >
           <div className="container py-10 lg:py-16 mx-auto">
             <div className="max-w-2xl text-center mx-auto">
@@ -38,8 +38,8 @@ function Index() {
               </div>
               <div className="mt-5 max-w-3xl">
                 <p className="text-lg text-slate-600 text-pretty">
-                  I build intuitive and user friendly end-to-end experiences,
-                  with a focus on backend development.
+                  I build user friendly end-to-end experiences with a focus on
+                  backend development.
                 </p>
               </div>
               {/* Button Group */}
@@ -50,10 +50,13 @@ function Index() {
               </div>
               {/* Social Media */}
               <div className="mt-8 gap-6 flex justify-center">
-                <a href="https://github.com/johnnywong30">
+                <a href="https://github.com/johnnywong30" target="_blank">
                   <SiGithub />
                 </a>
-                <a href="https://www.linkedin.com/in/johnnywong30">
+                <a
+                  href="https://www.linkedin.com/in/johnnywong30"
+                  target="_blank"
+                >
                   <SiLinkedin />
                 </a>
                 <a href="mailto:johnnywong2430@gmail.com">
