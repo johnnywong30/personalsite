@@ -73,7 +73,8 @@ function About() {
               </p>
               <p>
                 In my free time, I enjoy going on runs, going to the beach,
-                playing ultimate frisbee, and cooking new recipes.
+                playing ultimate frisbee, exploring new places with my camera,
+                and cooking new recipes.
               </p>
             </motion.div>
           </div>
